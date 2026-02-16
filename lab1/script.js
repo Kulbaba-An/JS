@@ -63,15 +63,12 @@
            (!checkAngle(angle)) ||
            (!checkAngle(alpha)) ||
            (!checkAngle(beta))  ){
-            console.log('error')
             return true;
         }
         else if( !checkLegHypotenuse(a,hypotenuse) || !checkLegHypotenuse(b,hypotenuse)  ){
-            console.log('error')
             return true;
         }
         else if(!checkAngle(angle) || !checkAngle(alpha) || !checkAngle(beta)){
-            console.log('error')
             return true;
         }
         return false;
@@ -145,3 +142,4 @@
         console.log("a = " + a + "\nb = " + b +  "\nc = ",hypotenuse,   "\nalpha = ",alpha,   "\nbeta = ",beta  )
         console.log("success")
         }
+
