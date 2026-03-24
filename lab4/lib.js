@@ -8,6 +8,9 @@
         else if(!asc) return a < b;
        
     }
+    function hasUndefine(arr){
+        return arr.some(elem => elem === undefined);
+    }
 
    
     //------------------------bubbleSort----------------------------------------------------------
@@ -24,7 +27,9 @@
                 }
             }
         }
-
+        if(hasUndefine(a)){
+            console.log("Мсив розріджений");
+        }
        console.log( "Comparisons = " + comparisons + " Swaps = "+ swaps );
         return a;
     }
@@ -50,7 +55,9 @@
                 swaps++;
             }
         }
-
+        if(hasUndefine(a)){
+            console.log("Мсив розріджений");
+        }
         console.log( "Comparisons = " + comparisons + " Swaps = "+ swaps );
         return a;
     }
@@ -77,7 +84,9 @@
 
             a[j + 1] = key;
         }
-
+        if(hasUndefine(a)){
+            console.log("Мсив розріджений");
+        }
         console.log( "Comparisons = " + comparisons + " Swaps = "+ swaps );
         return a;
     }
@@ -109,7 +118,9 @@
             }
             gap = Math.floor(gap / 2);
         }
-
+        if(hasUndefine(a)){
+            console.log("Мсив розріджений");
+        }
         console.log( "Comparisons = " + comparisons + " Swaps = "+ swaps );
         return a;
     }
@@ -153,7 +164,9 @@
         }
 
         qs(0, a.length - 1);
-
+        if(hasUndefine(a)){
+            console.log("Мсив розріджений");
+        }
         console.log( "Comparisons = " + comparisons + " Swaps = "+ swaps );
         return a;
     }
