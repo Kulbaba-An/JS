@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function startTimer() {
         clearInterval(timerID);
 
-        timerID = setInterval(() => {
+        timerID = setInterval(function() {
             timeLeft -= 0.1;
             timeEl.textContent = timeLeft.toFixed(1);
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Game over! Your score is  " + score + " points. Reload the page to start a new game.");
     }
 
-    document.getElementById("startBtn").addEventListener("click", () => {
+    document.getElementById("startBtn").addEventListener("click", function() {
         const diff = difficultySelect.value;
         const color = colorSelect.value;
 
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    square.addEventListener("click", () => {
+    square.addEventListener("click", function() {
         if (!gameActive) return;
 
         score++;
