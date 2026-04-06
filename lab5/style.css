@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#square {
+    position: fixed;
+    cursor: pointer;
+    display: none;
+}
+
+select, button {
+    padding: 5px;
+    margin: 5px;
+}
