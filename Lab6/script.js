@@ -10,6 +10,7 @@ let interval;
 let cells = [];
 
 let history = [];
+let blockMoves = false;
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -59,10 +60,12 @@ function startRandomGame() {
 }
 
 function newGame() {
+    blockMoves = false;
     startRandomGame();
 }
 
 function restartGame() {
+    blockMoves = false;
     board = JSON.parse(JSON.stringify(initialBoard));
     moves = 0;
     timer = 0;
@@ -101,23 +104,29 @@ function render() {
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board.length; j++) {
 
-            cells[i][j].classList.toggle("on", board[i][j]);
-            cells[i][j].classList.toggle("off", !board[i][j]);
+            if (board[i][j]) {
+                cells[i][j].classList.add("on");
+                cells[i][j].classList.remove("off");
+            } else {
+                cells[i][j].classList.add("off");
+                cells[i][j].classList.remove("on");
+            }
 
         }
     }
 }
 
 function handleClick(i, j) {
+    if (blockMoves) return;
     let last = history[history.length - 1];
 
   
     if (last && last[0] === i && last[1] === j) {
-        toggle(i, j);
+        turnOnOff(i, j);
         history.pop();
         moves--;
     } else {
-        toggle(i, j);
+        turnOnOff(i, j);
         history.push([i, j]);
         moves++;
     }
@@ -126,32 +135,31 @@ function handleClick(i, j) {
     if (isWin()) {
         clearInterval(interval);
         alert("You Win!!");
-       newGame();
+        blockMoves = true;
+      
     }
 }
 
-function toggle(i, j) {
-    let dirs = [
-        [0, 0],
-        [1, 0],
-        [-1, 0],
-        [0, 1],
-        [0, -1]
-    ];
+function turnOnOff(i, j) {
 
-    dirs.forEach(function (d) {
-        let x = i + d[0];
-        let y = j + d[1];
-
-        if (x >= 0 && x < 5 && y >= 0 && y < 5) {
-            board[x][y] = board[x][y] ? 0 : 1;
+    function flip(x, y) {
+        if (x >= 0 && x < board.length &&
+            y >= 0 && y < board.length) {
+           
+            board[x][y] = !board[x][y];
         }
-    });
+    }
+
+    flip(i, j);       
+    flip(i + 1, j);   
+    flip(i - 1, j);   
+    flip(i, j + 1);   
+    flip(i, j - 1);   
 }
 function isWin() {
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board.length; j++) {
-            if (board[i][j] !== 0) {
+            if (board[i][j] === true) {
                 return false;
             }
         }
