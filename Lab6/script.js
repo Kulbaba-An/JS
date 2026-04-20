@@ -142,7 +142,7 @@ function handleClick(i, j) {
 
 function turnOnOff(i, j) {
 
-    function flip(x, y) {
+    function OnOff(x, y) {
         if (x >= 0 && x < board.length &&
             y >= 0 && y < board.length) {
            
@@ -150,11 +150,11 @@ function turnOnOff(i, j) {
         }
     }
 
-    flip(i, j);       
-    flip(i + 1, j);   
-    flip(i - 1, j);   
-    flip(i, j + 1);   
-    flip(i, j - 1);   
+    OnOff(i, j);       
+    OnOff(i + 1, j);   
+    OnOff(i - 1, j);   
+    OnOff(i, j + 1);   
+    OnOff(i, j - 1);   
 }
 function isWin() {
     for (let i = 0; i < board.length; i++) {
