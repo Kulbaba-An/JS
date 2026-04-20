@@ -18,11 +18,11 @@ body {
 }
 
 .on {
-    background: yellow;
+    background: #DBC039;
 }
 
 .off {
-    background: gray;
+    background: #BAB186;
 }
 
 .buttons {
