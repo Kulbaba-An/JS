@@ -111,7 +111,7 @@ function render() {
 function handleClick(i, j) {
     let last = history[history.length - 1];
 
-    // повторний клік = відміна
+  
     if (last && last[0] === i && last[1] === j) {
         toggle(i, j);
         history.pop();
@@ -126,6 +126,7 @@ function handleClick(i, j) {
     if (isWin()) {
         clearInterval(interval);
         alert("You Win!!");
+       newGame();
     }
 }
 
