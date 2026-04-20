@@ -1,0 +1,30 @@
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.on {
+    background: yellow;
+}
+
+.off {
+    background: gray;
+}
+
+.buttons {
+    margin-top: 10px;
+}
