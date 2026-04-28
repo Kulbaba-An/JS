@@ -41,7 +41,7 @@
         },
         false
     );
-    //----------------------
+
     } );
 
     ns.loadCatalogCategories = function(){
@@ -149,18 +149,14 @@
             html = insertProperty(html, pricePropName, priceValue);
             return html;
         }
-        // Функція для завантаження випадкової категорії (Specials)
+        
 ns.loadRandomCategory = function () {
-    // Спочатку отримуємо список усіх категорій
+
     $ajaxUtils.sendGetRequest(allCategoriesURL, function(categories) {
-        // Генеруємо випадковий індекс від 0 до довжини масиву
         const randomIndex = Math.floor(Math.random() * categories.length);
         console.log("randomIndex " + randomIndex);
-        // Отримуємо short_name випадкової категорії
         const randomCategoryShortName = categories[randomIndex].short_name;
          console.log("randomCategoryShortName " + randomCategoryShortName);
-        
-        // Викликаємо вже існуючу функцію завантаження товарів
         ns.loadCatalogItems(randomCategoryShortName);
     });
 };
