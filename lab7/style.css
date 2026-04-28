@@ -1,6 +1,6 @@
-/* Основні налаштування */
+
 body {
-    background-color: #f8f9fa; /* Світло-сірий фон для всієї сторінки */
+    background-color: #f8f9fa; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -8,7 +8,7 @@ body {
     padding: 40px 0;
 }
 
-/* --- Плитки категорій (Tiles) --- */
+
 .category-tile {
     position: relative;
     border: 2px solid #dee2e6;
@@ -33,7 +33,7 @@ body {
     background: rgba(255, 255, 255, 0.8);
 }
 
-/* --- Плитки на головній (Home Tiles) --- */
+
 #catalog-tile, #sale-tile {
     height: 200px;
     padding: 20px;
@@ -50,18 +50,18 @@ body {
 }
 
 #catalog-tile {
-    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); /* Блакитний градієнт */
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); 
 }
 
 #sale-tile {
-    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); /* Рожевий градієнт */
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); 
 }
 
 #catalog-tile:hover, #sale-tile:hover {
     opacity: 0.9;
 }
 
-/* --- Картки товарів (Catalog Items) --- */
+
 .catalog-item-title {
     margin-top: 15px;
     color: #2c3e50;
@@ -77,7 +77,7 @@ body {
 
 .catalog-item-price {
     font-size: 1.5rem;
-    color: #e74c3c; /* Червоний колір для ціни */
+    color: #e74c3c; 
     font-weight: bold;
     margin: 10px 0;
 }
@@ -87,7 +87,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- Карусель (Carousel) --- */
+
 #main-carousel {
     margin-bottom: 50px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -95,10 +95,10 @@ body {
 
 .carousel-item img {
     height: 450px;
-    object-fit: cover; /* Щоб картинки не розтягувалися */
+    object-fit: cover; 
 }
 
-/* --- Заголовки --- */
+
 #catalog-categories-title {
     margin: 40px 0 20px;
     font-weight: 800;
@@ -108,14 +108,14 @@ body {
    
 }
 
-/* Виправлення помилок у назвах класів з вашого HTML */
-.catrgory-tile { /* Для сумісності з одруком у вашому HTML */
+
+.catrgory-tile {
     border: 1px solid #ddd;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.visually-hiden { /* Для сумісності з одруком у кнопках каруселі */
+.visually-hiden { 
     display: none;
 }
 
