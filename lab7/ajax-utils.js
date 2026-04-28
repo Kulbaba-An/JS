@@ -1,14 +1,3 @@
-// let req = new XMLHttpRequest
-//властивість - onreadyatatechange
-
-// створ запит open() (відкрити сеанс)
-//req/open("GET", "data/1.txt")
-//URL
-// send() відправити запит
-//
-//status - цифр
-//  statusText - цифр текст 
-// responseText - доступ до відгуку
 
 
 (function(global){
