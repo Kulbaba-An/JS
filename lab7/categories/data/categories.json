@@ -1,0 +1,37 @@
+
+    [
+
+    {
+    "id": 0,
+    "short_name" : "A",
+    "name": "Category-1",
+    "notes": "some text",
+    "url": "data/catalogs/A.json"
+
+    },
+
+    {
+    "id": 1,
+    "short_name" : "B",
+    "name": "Category-2",
+    "notes": "some text",
+    "url": "data/catalogs/B.json"
+
+    },
+    {
+    "id": 2,
+    "short_name" : "C",
+    "name": "Category-3",
+    "notes": "some text",
+    "url": "data/catalogs/C.json"
+
+    },
+    {
+    "id": 3,
+    "short_name" : "D",
+    "name": "Category-4",
+    "notes": "some text",
+    "url": "data/catalogs/D.json"
+
+    }
+    ]

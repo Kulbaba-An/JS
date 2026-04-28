@@ -1,0 +1,121 @@
+/* Основні налаштування */
+body {
+    background-color: #f8f9fa; /* Світло-сірий фон для всієї сторінки */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main-content {
+    padding: 40px 0;
+}
+
+/* --- Плитки категорій (Tiles) --- */
+.category-tile {
+    position: relative;
+    border: 2px solid #dee2e6;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.category-tile span {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* --- Плитки на головній (Home Tiles) --- */
+#catalog-tile, #sale-tile {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#catalog-tile {
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%); /* Блакитний градієнт */
+}
+
+#sale-tile {
+    background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%); /* Рожевий градієнт */
+}
+
+#catalog-tile:hover, #sale-tile:hover {
+    opacity: 0.9;
+}
+
+/* --- Картки товарів (Catalog Items) --- */
+.catalog-item-title {
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+.catalog-item-photo {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.catalog-item-price {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Червоний колір для ціни */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.catalog-item-details {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* --- Карусель (Carousel) --- */
+#main-carousel {
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-item img {
+    height: 450px;
+    object-fit: cover; /* Щоб картинки не розтягувалися */
+}
+
+/* --- Заголовки --- */
+#catalog-categories-title {
+    margin: 40px 0 20px;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   
+}
+
+/* Виправлення помилок у назвах класів з вашого HTML */
+.catrgory-tile { /* Для сумісності з одруком у вашому HTML */
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.visually-hiden { /* Для сумісності з одруком у кнопках каруселі */
+    display: none;
+}
+
