@@ -163,15 +163,6 @@ ns.loadRandomCategory = function () {
 
 
 
-    
-
-
-
-        
-
-
-
-
 
 global.$ns = ns;
 
