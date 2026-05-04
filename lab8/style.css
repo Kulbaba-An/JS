@@ -1,0 +1,91 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; overflow-x: hidden; }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #a5aba3;
+    color: rgb(27, 27, 27);
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.nav-links li a {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- Carousel --- */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img { width: 100%; height: auto; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+.next { right: 0; }
+.dots-container { text-align: center; margin-top: 10px; }
+.dot {
+    height: 12px; width: 12px; margin: 0 5px;
+    background-color: #bbb; border-radius: 50%;
+    display: inline-block; cursor: pointer;
+}
+.active-dot { background-color: #333; }
+
+
+@media (max-width: 767.98px) {
+    .hamburger {
+        display: flex; flex-direction: column; gap: 5px;
+        background: none; border: none; cursor: pointer;
+    }
+    .hamburger span { width: 25px; height: 3px; background: white; }
+
+    .nav-links {
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: #444; flex-direction: column;
+        max-height: 0; overflow: hidden; /* Анімація випадання */
+    }
+    .nav-links.open { max-height: 300px; }
+    .nav-links li { padding: 15px; border-bottom: 1px solid #555; }
+    .nav-links li a { flex-direction: row; gap: 10px; }
+
+    .large-only { display: none; }
+}
+
+
+@media (min-width: 768px) {
+    .hamburger { display: none; }
+    .medium-only { display: none; }
+    .icon { font-size: 1.5rem; }
+}

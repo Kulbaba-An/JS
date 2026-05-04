@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">New Site</div>
+    
+    <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">
+            <img src="icons\house-fill.svg" alt="Icon Home" width="24" height="24">
+            <span>Home</span></a></li>
+        <li><a href="#">
+             <img src="icons\book-fill.svg" alt="Icon Home" width="24" height="24">
+          
+            <span>Catalog</span></a></li>
+        <li><a href="#">
+             <img src="icons\headset.svg" alt="Icon Home" width="24" height="24">
+          
+            <span>Contacts</span></a></li>
+    </ul>
+</nav>
+
+<section class="carousel-container">
+    <div class="carousel-slide" id="carousel-slide">
+        <img src="https://placehold.co/1200x400/?text=Slide+1" alt="S1">
+        <img src="https://placehold.co/1200x400/?text=Slide+2" alt="S2">
+        <img src="https://placehold.co/1200x400/?text=Slide+3" alt="S3">
+         <img src="https://placehold.co/1200x400/?text=Slide+4" alt="S4">
+          <img src="https://placehold.co/1200x400/?text=Slide+5" alt="S5">
+    </div>
+    
+    <button class="prev" id="prevBtn">&#10094;</button>
+    <button class="next" id="nextBtn">&#10095;</button>
+
+    <div class="dots-container" id="dots-container"></div>
+</section>
+
+<main class="content">
+    <div class="large-only">
+        <h2>Img (≥768px)</h2>
+        <img src="https://placehold.co/300x200?text=Large+1">
+        <img src="https://placehold.co/300x200?text=Large+2">
+    </div>
+
+    <div class="medium-only">
+        <h2>Img(<768px)</h2>
+        <img src="https://placehold.co/300x200?text=Medium+1">
+        <img src="https://placehold.co/300x200?text=Medium+2">
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
