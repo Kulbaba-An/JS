@@ -73,7 +73,7 @@ body { font-family: sans-serif; overflow-x: hidden; }
 
     .nav-links {
         position: absolute; top: 100%; left: 0; width: 100%;
-        background: #444; flex-direction: column;
+        background: #a5aba3; flex-direction: column;
         max-height: 0; overflow: hidden; /* Анімація випадання */
     }
     .nav-links.open { max-height: 300px; }
