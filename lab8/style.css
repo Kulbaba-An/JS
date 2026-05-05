@@ -77,10 +77,10 @@ body { font-family: sans-serif; overflow-x: hidden; }
     .nav-links {
         position: absolute; top: 100%; left: 0; width: 100%;
         background: #444; flex-direction: column;
-        max-height: 0; overflow: hidden; /* Анімація випадання */
+        max-height: 0; overflow: hidden; 
     }
     .nav-links.open { max-height: 300px; }
-    .nav-links li { padding: 15px; border-bottom: 1px solid #555; }
+    .nav-links li { padding: 15px; border-bottom: 1px solid #bbb; }
     .nav-links li a { flex-direction: row; gap: 10px; }
 
     .large-only { display: none; }
