@@ -28,21 +28,23 @@ body { font-family: sans-serif; overflow-x: hidden; }
     align-items: center;
 }
 
+
 .carousel-container {
     position: relative;
-    max-width: 100%;
-    margin: auto;
     overflow: hidden;
-    padding: 15px;
+    width: 100%;
 }
+
 
 .carousel-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide img { width: 100%; height: auto; }
-
+.carousel-slide img {
+    width: 100%;
+    flex-shrink: 0; 
+}
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -53,7 +55,9 @@ body { font-family: sans-serif; overflow-x: hidden; }
     padding: 15px;
     cursor: pointer;
 }
-.next { right: 0; }
+.prev { left: 10px; }
+.next { right: 10px; }
+
 .dots-container { text-align: center; margin-top: 10px; }
 .dot {
     height: 12px; width: 12px; margin: 0 5px;
@@ -72,7 +76,7 @@ body { font-family: sans-serif; overflow-x: hidden; }
 
     .nav-links {
         position: absolute; top: 100%; left: 0; width: 100%;
-        background: #a5aba3; flex-direction: column;
+        background: #444; flex-direction: column;
         max-height: 0; overflow: hidden; /* Анімація випадання */
     }
     .nav-links.open { max-height: 300px; }
